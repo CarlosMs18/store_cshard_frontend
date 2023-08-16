@@ -23,7 +23,9 @@ export class ProductoService {
   }
 
   editar(request:Producto):Observable<ResponseApi>{
-    return this.http.post<ResponseApi>(`${this.urlApi}Editar`,request);
+    /* http://localhost:5179/api/Producto/Editar */
+    console.log(`${this.urlApi}Editar`);
+    return this.http.put<ResponseApi>(`${this.urlApi}Editar`,request);
   }
 
   eliminar(id:number):Observable<ResponseApi>{
