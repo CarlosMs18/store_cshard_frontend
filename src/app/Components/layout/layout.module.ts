@@ -11,6 +11,7 @@ import { ReporteComponent } from './Pages/reporte/reporte.component';
 import { SharedModule } from 'src/app/Reutilizable/shared/shared.module';
 import { ModalUsuarioComponent } from './Modales/modal-usuario/modal-usuario.component';
 import { ModalProductoComponent } from './modales/modal-producto/modal-producto.component';
+import { ModalDetalleVentaComponent } from './modales/modal-detalle-venta/modal-detalle-venta.component';
 
 
 
@@ -24,6 +25,7 @@ import { ModalProductoComponent } from './modales/modal-producto/modal-producto.
     ReporteComponent,
     ModalUsuarioComponent,
     ModalProductoComponent,
+    ModalDetalleVentaComponent,
 
   ],
   imports: [

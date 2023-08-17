@@ -16,7 +16,7 @@
                     </mat-select>
                 </mat-form-field>
 
-                <mat-form-field appearance="fill" *ngIf="formularioBusqueda.value.buscarPor == 'numero'">
+                <mat-form-field appearance="fill" *ngIf="formularioBusqueda.value.buscarPor == 'numero' ">
                     <mat-label>Numero Orden</mat-label>
                     <input matInput autocomplete="off" formControlName="numero">
 
@@ -24,7 +24,7 @@
 
 
 
-                <mat-form-field appearance="fill" *ngIf="formularioBusqueda.value.buscarPor == 'fecha'">
+                <mat-form-field appearance="fill" *ngIf="formularioBusqueda.value.buscarPor == 'fecha' ">
                     <mat-label>Fecha Inicio</mat-label>
                     <input matInput autocomplete="off" formControlName="fechaInicio" [matDatepicker]="picker1">
                     <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
