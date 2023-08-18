@@ -53,7 +53,7 @@ export class HistorialVentaComponent implements OnInit, AfterViewInit {
     private _ventaServicio :VentaService,
     private _utilidadServicio : UtilidadService
 
-  ) { 
+  ) {
     this.formularioBusqueda = this.fb.group({
       buscarPor : ['fecha'], //este campo sera el disparador para poder realizar la bsuqueda, si cambia a fecha habilita los dos campos de fecha, si cambia a numero habilita solo el campo d enumero
       numero :[""],
@@ -62,8 +62,8 @@ export class HistorialVentaComponent implements OnInit, AfterViewInit {
     })
 
     this.formularioBusqueda.get("buscarPor")?.valueChanges.subscribe(value => {  //cada vez que cambie que haga una nueva consulta necesitamos limpiar los campos
-     
-   
+
+
       this.formularioBusqueda.patchValue({
         numero : "",
         fechaInicio :"",
@@ -92,7 +92,7 @@ buscarVentas(){
   if(this.formularioBusqueda.value.buscarPor == "fecha"){
     _fechaInicio = moment(this.formularioBusqueda.value.fechaInicio).format('DD/MM/YYYY');
     _fechaFin = moment(this.formularioBusqueda.value.fechaFin).format('DD/MM/YYYY');
-    
+
     if(_fechaInicio === "Invalid date" || _fechaFin === "Invalid date"){
       this._utilidadServicio.mostrarAlerta("Debe de ingresar ambas fechas","Oops!");
       return;
